@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CcH-Ao-u0i">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Second View Controller-->
+        <scene sceneID="Y53-9z-YsC">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w7D-ky-lkF" customClass="SecondViewController" customModule="Fortress_West_Point" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WaF-VC-mTF">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q55-8Z-o8M">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="996"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="cfE-g1-TMu" appends="YES" id="MPd-Cr-Asq"/>
+                                    <outletCollection property="gestureRecognizers" destination="CcZ-Jw-znO" appends="YES" id="Atp-ps-H09"/>
+                                    <outletCollection property="gestureRecognizers" destination="qAs-Of-RMm" appends="YES" id="dCs-x9-RIH"/>
+                                </connections>
+                            </arscnView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cEr-bS-tQ9">
+                                <rect key="frame" x="0.0" y="757" width="766" height="217"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="0.53828660102739723" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES"/>
+                                </accessibility>
+                                <connections>
+                                    <outlet property="dataSource" destination="w7D-ky-lkF" id="zAh-XR-fMr"/>
+                                    <outlet property="delegate" destination="w7D-ky-lkF" id="yTR-bl-lye"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Object" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUh-2g-ClE">
+                                <rect key="frame" x="268.5" y="701" width="231" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7p1-Vx-wAL">
+                                <rect key="frame" x="46" y="44" width="76" height="51"/>
+                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="34"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CloseButton:" destination="w7D-ky-lkF" eventType="touchUpInside" id="UGV-fs-sjL"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juk-pI-PcS">
+                                <rect key="frame" x="313" y="661" width="140" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="KdA-4y-31w"/>
+                                    <constraint firstAttribute="height" constant="40" id="cgF-cB-Gwz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <state key="normal" title="Text Box 2">
+                                    <color key="titleColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="TextBoxButton:forEvent:" destination="w7D-ky-lkF" eventType="touchUpInside" id="u2Y-Gr-n9I"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNX-Im-RZu">
+                                <rect key="frame" x="558" y="661" width="142" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="778-GO-2Gw"/>
+                                    <constraint firstAttribute="width" constant="140" id="hkX-jI-J5l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <state key="normal" title="Text Box 3">
+                                    <color key="titleColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="TextBoxButton:forEvent:" destination="w7D-ky-lkF" eventType="touchUpInside" id="DqW-0b-5MP"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yvg-bd-Wop" customClass="FLAnimatedImageView">
+                                <rect key="frame" x="271.5" y="400" width="225" height="224"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yvg-bd-Wop" secondAttribute="height" multiplier="198:197" id="77k-AZ-b4T"/>
+                                </constraints>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Srz-7H-ME1">
+                                <rect key="frame" x="46" y="661" width="140" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="Y5Q-NV-63c"/>
+                                    <constraint firstAttribute="height" constant="40" id="p8P-Mt-tFN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <state key="normal" title="Text Box 1">
+                                    <color key="titleColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="TextBoxButton:forEvent:" destination="w7D-ky-lkF" eventType="touchUpInside" id="qt0-Dg-jJt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Srz-7H-ME1" firstAttribute="top" secondItem="7p1-Vx-wAL" secondAttribute="bottom" constant="566" id="2gg-bM-1wv"/>
+                            <constraint firstItem="juk-pI-PcS" firstAttribute="leading" secondItem="Srz-7H-ME1" secondAttribute="trailing" constant="127" id="38T-q1-ty3"/>
+                            <constraint firstItem="b0Q-L9-M8U" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7p1-Vx-wAL" secondAttribute="trailing" symbolic="YES" id="3sS-JO-Rfa"/>
+                            <constraint firstItem="yvg-bd-Wop" firstAttribute="centerX" secondItem="WaF-VC-mTF" secondAttribute="centerX" id="9WD-lD-F5t"/>
+                            <constraint firstItem="q55-8Z-o8M" firstAttribute="leading" secondItem="WaF-VC-mTF" secondAttribute="leading" id="B8P-7w-vAe"/>
+                            <constraint firstAttribute="trailing" secondItem="q55-8Z-o8M" secondAttribute="trailing" id="BdD-vT-d34"/>
+                            <constraint firstItem="Srz-7H-ME1" firstAttribute="top" secondItem="7p1-Vx-wAL" secondAttribute="bottom" constant="566" id="F1r-F0-QAm"/>
+                            <constraint firstItem="yvg-bd-Wop" firstAttribute="top" secondItem="b0Q-L9-M8U" secondAttribute="top" constant="380" id="J8J-1R-rkw"/>
+                            <constraint firstItem="CNX-Im-RZu" firstAttribute="top" secondItem="b0Q-L9-M8U" secondAttribute="top" constant="641" id="VOW-7I-6NR"/>
+                            <constraint firstItem="juk-pI-PcS" firstAttribute="top" secondItem="yvg-bd-Wop" secondAttribute="bottom" constant="37" id="VYb-3s-xyg"/>
+                            <constraint firstItem="7p1-Vx-wAL" firstAttribute="leading" secondItem="b0Q-L9-M8U" secondAttribute="leading" constant="46" id="VaG-k4-YKp"/>
+                            <constraint firstItem="CNX-Im-RZu" firstAttribute="leading" secondItem="juk-pI-PcS" secondAttribute="trailing" constant="105" id="bYF-u7-20C"/>
+                            <constraint firstItem="b0Q-L9-M8U" firstAttribute="trailing" secondItem="CNX-Im-RZu" secondAttribute="trailing" constant="68" id="bYs-Ch-kkn"/>
+                            <constraint firstItem="q55-8Z-o8M" firstAttribute="top" secondItem="WaF-VC-mTF" secondAttribute="top" id="c2B-sO-tph"/>
+                            <constraint firstItem="eUh-2g-ClE" firstAttribute="top" secondItem="juk-pI-PcS" secondAttribute="bottom" id="clu-0y-MCk"/>
+                            <constraint firstItem="juk-pI-PcS" firstAttribute="centerX" secondItem="WaF-VC-mTF" secondAttribute="centerX" id="hFQ-ms-7fk"/>
+                            <constraint firstItem="eUh-2g-ClE" firstAttribute="centerX" secondItem="WaF-VC-mTF" secondAttribute="centerX" id="jVf-zn-9fD"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="q55-8Z-o8M" secondAttribute="bottom" constant="-22" id="l9U-d7-tFz"/>
+                            <constraint firstItem="7p1-Vx-wAL" firstAttribute="top" secondItem="b0Q-L9-M8U" secondAttribute="top" constant="24" id="o7b-tf-9IS"/>
+                            <constraint firstItem="Srz-7H-ME1" firstAttribute="leading" secondItem="b0Q-L9-M8U" secondAttribute="leading" constant="46" id="wYk-p9-thz"/>
+                            <constraint firstItem="yvg-bd-Wop" firstAttribute="centerY" secondItem="WaF-VC-mTF" secondAttribute="centerY" id="ybR-e5-PHW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="b0Q-L9-M8U"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="curObject" destination="eUh-2g-ClE" id="2wt-Ak-7hP"/>
+                        <outlet property="loadGuide" destination="yvg-bd-Wop" id="Zvy-Ke-Usz"/>
+                        <outlet property="loadText1" destination="Srz-7H-ME1" id="vXL-kY-FRE"/>
+                        <outlet property="loadText2" destination="juk-pI-PcS" id="vfX-aD-wlr"/>
+                        <outlet property="loadText3" destination="CNX-Im-RZu" id="wPn-jL-1Ji"/>
+                        <outlet property="objectPicker" destination="cEr-bS-tQ9" id="rrq-6b-EX3"/>
+                        <outlet property="sceneView" destination="q55-8Z-o8M" id="yTO-dH-Trz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VQW-ZA-uoB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="cfE-g1-TMu">
+                    <connections>
+                        <action selector="rotateObject:" destination="w7D-ky-lkF" id="San-o0-x0u"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="CcZ-Jw-znO">
+                    <connections>
+                        <action selector="scaleObject:" destination="w7D-ky-lkF" id="HBC-ge-fGW"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <tapGestureRecognizer id="qAs-Of-RMm"/>
+            </objects>
+            <point key="canvasLocation" x="-17.96875" y="754.1015625"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="lRZ-Hu-98L">
+            <objects>
+                <viewController id="CcH-Ao-u0i" customClass="GameViewController" customModule="Fortress_West_Point" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g3m-X1-ehn" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SYa-dU-Sij">
+                                <rect key="frame" x="329.5" y="627.5" width="109" height="69"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Start">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="50" name="Georgia"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="pEJ-38-Hau" kind="show" id="r4A-Om-flI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4we-AD-nXR">
+                                <rect key="frame" x="333.5" y="727.5" width="101" height="69"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Map">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="50" name="Georgia"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="gaD-jI-5qP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4we-AD-nXR" firstAttribute="centerX" secondItem="g3m-X1-ehn" secondAttribute="centerX" id="0HO-I0-yzw"/>
+                            <constraint firstItem="SYa-dU-Sij" firstAttribute="centerY" secondItem="g3m-X1-ehn" secondAttribute="centerY" constant="150" id="GLT-M3-hCW"/>
+                            <constraint firstItem="SYa-dU-Sij" firstAttribute="centerX" secondItem="g3m-X1-ehn" secondAttribute="centerX" id="RhE-AN-vqH"/>
+                            <constraint firstItem="4we-AD-nXR" firstAttribute="centerY" secondItem="g3m-X1-ehn" secondAttribute="centerY" constant="250" id="vgT-13-RN1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XBG-we-Lzh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NmH-Jb-WqD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3118" y="755"/>
+        </scene>
+        <!--Fort Selection Controller-->
+        <scene sceneID="WwT-LQ-Re1">
+            <objects>
+                <viewController id="pEJ-38-Hau" customClass="FortSelectionController" customModule="Fortress_West_Point" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tnl-Od-8lO" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6jw-AM-2bA">
+                                <rect key="frame" x="266.5" y="479.5" width="235" height="65"/>
+                                <subviews>
+                                    <button contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grk-vD-Dww">
+                                        <rect key="frame" x="0.0" y="0.0" width="235" height="65"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="46"/>
+                                        <color key="tintColor" red="0.14901961389999999" green="0.14901961389999999" blue="0.14901961389999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <state key="normal" title="Fort Wyllys">
+                                            <color key="titleColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="nIh-AM-akB" kind="show" id="kpB-ZD-LTn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qg-xY-Q4L">
+                                <rect key="frame" x="83" y="628" width="602" height="68"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="49"/>
+                                <state key="normal" title="Fort X (under construction)">
+                                    <color key="titleColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4I-9e-WcS">
+                                <rect key="frame" x="48" y="49" width="76" height="51"/>
+                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="34"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="CcH-Ao-u0i" kind="show" id="PwW-s6-uFW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6jw-AM-2bA" firstAttribute="centerX" secondItem="tnl-Od-8lO" secondAttribute="centerX" id="0MV-6F-ibL"/>
+                            <constraint firstItem="s4I-9e-WcS" firstAttribute="leading" secondItem="j7M-GZ-s0C" secondAttribute="leading" constant="48" id="1V1-hb-26e"/>
+                            <constraint firstItem="s4I-9e-WcS" firstAttribute="top" secondItem="j7M-GZ-s0C" secondAttribute="top" constant="29" id="8UI-CD-R91"/>
+                            <constraint firstItem="1Qg-xY-Q4L" firstAttribute="centerY" secondItem="tnl-Od-8lO" secondAttribute="centerY" constant="150" id="cjj-Bc-3aX"/>
+                            <constraint firstItem="6jw-AM-2bA" firstAttribute="centerY" secondItem="tnl-Od-8lO" secondAttribute="centerY" id="dMz-he-gQr"/>
+                            <constraint firstItem="1Qg-xY-Q4L" firstAttribute="centerX" secondItem="tnl-Od-8lO" secondAttribute="centerX" id="r6n-3h-E1R"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="j7M-GZ-s0C"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qtT-eI-YkC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2050" y="755"/>
+        </scene>
+        <!--Intro Controller-->
+        <scene sceneID="jxi-ZF-3lB">
+            <objects>
+                <viewController id="nIh-AM-akB" customClass="FWIntroController" customModule="Fortress_West_Point" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Igk-kq-tHS" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWP-Lw-waz">
+                                <rect key="frame" x="197.5" y="878" width="373" height="68"/>
+                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="50"/>
+                                <state key="normal" title="Touch to Start">
+                                    <color key="titleColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="w7D-ky-lkF" kind="show" id="ofl-b1-0Gt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRc-84-3ns">
+                                <rect key="frame" x="46" y="36.5" width="76" height="51"/>
+                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="34"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="pEJ-38-Hau" kind="show" id="rCY-d1-aQ1"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beV-d8-LWT">
+                                <rect key="frame" x="85" y="521" width="600" height="352"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="0.79757063356164382" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.14901961389999999" green="0.14901961389999999" blue="0.14901961389999999" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="352" id="2QA-RC-jX7"/>
+                                    <constraint firstAttribute="width" constant="600" id="zMb-h8-INt"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <string key="text">Welcome to Fort Wyllys! Through this interactive experience, you will learn about Fort Wyllys’ role at West Point. 
+
+The purpose of Fort Wyllys is to protect Fortress West Point from infantry attacks from the south while reinforcing Fort Putnam and Redoubt 4 to the east. 
+
+By clicking on the map, you will be able to see where Fort Wyllys is in relation to the Hudson River and the other forts and redoubts on West Point. You will be able to see how the fort was designed to take full advantage of the terrain around it. 
+ Because of the downward slope to the south, the southern walls are lower. Because the eastern side faces a hill, the walls there are taller. 
+
+Have fun exploring Fort Wyllys!</string>
+                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="27"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current photo of the fort as it stands today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UI-ZB-tQ1">
+                                <rect key="frame" x="180" y="485" width="401.5" height="21"/>
+                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="18"/>
+                                <color key="textColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fortwyllys" translatesAutoresizingMaskIntoConstraints="NO" id="HEv-mD-cXN">
+                                <rect key="frame" x="180" y="193" width="408" height="284"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" adjustable="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HEv-mD-cXN" secondAttribute="height" multiplier="102:71" id="dhR-dc-SXG"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iWP-Lw-waz" firstAttribute="top" secondItem="beV-d8-LWT" secondAttribute="bottom" constant="5" id="44n-OW-jAo"/>
+                            <constraint firstItem="0UI-ZB-tQ1" firstAttribute="leading" secondItem="T5U-D1-m5r" secondAttribute="leading" constant="180" id="7lg-kK-Dp9"/>
+                            <constraint firstAttribute="bottom" secondItem="beV-d8-LWT" secondAttribute="bottom" constant="151" id="87g-oV-Oci"/>
+                            <constraint firstItem="beV-d8-LWT" firstAttribute="top" secondItem="0UI-ZB-tQ1" secondAttribute="bottom" constant="15" id="9dt-O0-dKj"/>
+                            <constraint firstItem="HEv-mD-cXN" firstAttribute="leading" secondItem="T5U-D1-m5r" secondAttribute="leading" constant="180" id="COr-q9-Vre"/>
+                            <constraint firstItem="HEv-mD-cXN" firstAttribute="top" secondItem="T5U-D1-m5r" secondAttribute="top" constant="173" id="Edq-DZ-5d5"/>
+                            <constraint firstItem="beV-d8-LWT" firstAttribute="leading" secondItem="T5U-D1-m5r" secondAttribute="leading" constant="85" id="Is1-An-iIS"/>
+                            <constraint firstItem="T5U-D1-m5r" firstAttribute="trailing" secondItem="0UI-ZB-tQ1" secondAttribute="trailing" constant="186.5" id="LNt-Xg-LT3"/>
+                            <constraint firstItem="lRc-84-3ns" firstAttribute="leading" secondItem="T5U-D1-m5r" secondAttribute="leading" constant="46" id="MTg-0Y-6aj"/>
+                            <constraint firstItem="HEv-mD-cXN" firstAttribute="leading" secondItem="T5U-D1-m5r" secondAttribute="leading" constant="180" id="MpD-fn-tFX"/>
+                            <constraint firstItem="0UI-ZB-tQ1" firstAttribute="leading" secondItem="HEv-mD-cXN" secondAttribute="leading" id="Mvc-kH-PWL"/>
+                            <constraint firstItem="T5U-D1-m5r" firstAttribute="trailing" secondItem="beV-d8-LWT" secondAttribute="trailing" constant="83" id="RJ8-Yx-qpT"/>
+                            <constraint firstItem="beV-d8-LWT" firstAttribute="leading" secondItem="T5U-D1-m5r" secondAttribute="leading" constant="85" id="Y7S-VB-iva"/>
+                            <constraint firstItem="0UI-ZB-tQ1" firstAttribute="top" secondItem="HEv-mD-cXN" secondAttribute="bottom" constant="8" symbolic="YES" id="YnH-cr-Fz2"/>
+                            <constraint firstItem="T5U-D1-m5r" firstAttribute="trailing" secondItem="HEv-mD-cXN" secondAttribute="trailing" constant="180" id="ePR-Ww-dNN"/>
+                            <constraint firstItem="beV-d8-LWT" firstAttribute="top" secondItem="HEv-mD-cXN" secondAttribute="bottom" constant="44" id="jWO-Bh-7hJ"/>
+                            <constraint firstItem="iWP-Lw-waz" firstAttribute="leading" secondItem="T5U-D1-m5r" secondAttribute="leading" constant="197.5" id="lM3-hH-vRu"/>
+                            <constraint firstItem="iWP-Lw-waz" firstAttribute="top" secondItem="beV-d8-LWT" secondAttribute="bottom" constant="5" id="laa-eb-s90"/>
+                            <constraint firstItem="T5U-D1-m5r" firstAttribute="bottom" secondItem="iWP-Lw-waz" secondAttribute="bottom" constant="28" id="o9h-zT-gYR"/>
+                            <constraint firstItem="T5U-D1-m5r" firstAttribute="trailing" secondItem="iWP-Lw-waz" secondAttribute="trailing" constant="197.5" id="obX-sO-bLF"/>
+                            <constraint firstItem="0UI-ZB-tQ1" firstAttribute="top" secondItem="HEv-mD-cXN" secondAttribute="bottom" constant="8" id="xDB-kq-dV9"/>
+                            <constraint firstItem="lRc-84-3ns" firstAttribute="top" secondItem="T5U-D1-m5r" secondAttribute="top" constant="16.5" id="y1P-EA-iJZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="T5U-D1-m5r"/>
+                    </view>
+                    <connections>
+                        <outlet property="fortwyllys" destination="HEv-mD-cXN" id="8O0-3y-7Zx"/>
+                        <outlet property="scrollbox" destination="beV-d8-LWT" id="U2f-x1-swL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gcz-Lh-aUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1100.78125" y="754.1015625"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="Fortress_West_Point" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pxi-es-Jv3">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="954"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="6Km-P1-fCX"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="view" destination="pxi-es-Jv3" id="mcX-1n-OEE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3119" y="1734"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="fortwyllys" width="4032" height="3024"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="rCY-d1-aQ1"/>
+    </inferredMetricsTieBreakers>
+</document>
